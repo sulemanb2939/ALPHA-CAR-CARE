@@ -1,0 +1,32 @@
+/* CRITICAL FIX: Force service cards to be visible by default */
+/* This overrides any JavaScript animation states */
+
+.service-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: var(--transition);
+    text-align: center;
+
+    /* FORCE VISIBILITY - Override GSAP */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+    /* FORCE VISIBILITY */
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.services .container {
+    /* FORCE VISIBILITY - Override any animations */
+    opacity: 1 !important;
+    visibility: visible !important;
+}
